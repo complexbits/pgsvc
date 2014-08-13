@@ -1,0 +1,30 @@
+#!/bin/bash
+# ############################################
+# Install script for pgsrv, the simple password
+# server.
+# 
+# Jamie Schwettmann
+# @complexbits, github.com/complexbits
+# 
+# Requirements: 
+# 	- root access
+#	- openssh configured
+#	- python2 or 3
+#	- python development packages
+#	- passacre source
+#	- cykeccak
+
+# Installation steps this script will perform:
+# 	1. Copy pgsrv to /usr/bin or $PREFIX
+#	2. (Optional) Create user for pgsrv access
+#	   	  a. add user
+#		  b. create home directory
+#		  c. generate public key pair
+#		  d. add public key to authorized_keys
+#		      w/ app command
+#
+#
+#
+#
+#
+

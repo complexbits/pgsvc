@@ -1,0 +1,46 @@
+#!/bin/bash
+# #############################################################################
+# A script to manage the password generation service
+#
+# Jamie Schwettmann
+# @complexbits github.com/complexbits
+#
+# #############################################################################
+#
+THISSCRIPT=`basename $0`
+
+# This script is designed to run as an umprivileged user.
+
+
+#####################
+# This is some business about checking for the home directory. Really, the 
+# installation & setup script(s) should manage this, it shouldn't happen on
+# every login.
+#
+# Check whether $HOME is set
+#[[ -e $HOME ]] && echo "\$HOME=$HOME" || echo "\$HOME is not set! What's going on here?"
+#echo "Querying username..."
+# Check the username
+#USER=`whoami`
+#
+# Try /home/$USER
+#echo "Trying /home/$USER..."
+#touch /home/$USER/wtf && echo "success!" && rm /home/$USER/wtf && export HOME=/home/$USER/
+# Change to the home directory
+#cd $HOME
+#
+# If everything is setup properly, we should be logging in to the user directory
+# and passacre should already be initialized (or setup to avoid initialization?)
+
+#mkdir -p ~/.config/passacre
+#passacre init ~/.config/passacre/passacre.sqlite
+
+# Give the user a fancy banner:
+printf "This interactive password generation server will generate a strong password
+based on the 'Site' and 'Password' you enter. Note that, Site and Password are for your own reference in deterministically regenerating this password again later, as no information is saved here.\n\n"
+
+# Run the password generation
+# 
+passacre generate
+
+exit 0
